@@ -8,7 +8,7 @@ function Suras(props) {
 
   return (
     <>
-      <main className='container lg flex flex-wrap justify-between text-xl'>
+      <main className='container lg flex flex-wrap justify-between'>
         {data.map((sura) => {
           return <Sura sura={sura} key={sura.id} />;
         })}

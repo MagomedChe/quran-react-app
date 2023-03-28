@@ -9,6 +9,9 @@ export const sliceApi = createApi({
     getListSuras: build.query({
       query: () => "index.json",
     }),
+    getOneSura: build.query({
+      query: (id) => "${id}.json",
+    }),
   }),
 });
 

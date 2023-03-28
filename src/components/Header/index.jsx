@@ -4,10 +4,10 @@ function Header(props) {
       <div className=''>القرآن</div>
       <div className='flex'>
         <div className='ml-8'>
-          <span class='material-symbols-outlined text-4xl'>search</span>
+          <span className='material-symbols-outlined text-4xl'>search</span>
         </div>
         <div className='ml-8'>
-          <span class='material-symbols-outlined text-4xl'>headphones</span>
+          <span className='material-symbols-outlined text-4xl'>headphones</span>
         </div>
       </div>
     </div>

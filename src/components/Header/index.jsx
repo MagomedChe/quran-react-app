@@ -1,6 +1,6 @@
 function Header(props) {
   return (
-    <div className='flex my-8 justify-between text-cyan-400 text-6xl'>
+    <div className='flex my-8 justify-between text-cyan-500 text-6xl'>
       <div className=''>القرآن</div>
       <div className='flex'>
         <div className='ml-8'>

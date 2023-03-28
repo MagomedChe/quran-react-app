@@ -1,11 +1,16 @@
-import Suras from "./components/Suras/index";
+import Suras from "./components/ListSuras/index";
 import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
+import Ayas from "./components/OneSura";
 
 function App() {
   return (
     <div className='container m-auto w-900px'>
       <Header />
-      <Suras />
+      <Routes>
+        <Route path='' element={<Suras />} />
+        <Route path='/1' element={<Ayas />} />
+      </Routes>
     </div>
   );
 }

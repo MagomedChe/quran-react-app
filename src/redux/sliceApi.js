@@ -6,10 +6,10 @@ export const sliceApi = createApi({
     baseUrl: "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/ru/",
   }),
   endpoints: (build) => ({
-    getSuras: build.query({
+    getListSuras: build.query({
       query: () => "index.json",
     }),
   }),
 });
 
-export const { useGetSurasQuery } = sliceApi;
+export const { useGetListSurasQuery } = sliceApi;

@@ -10,9 +10,9 @@ export const sliceApi = createApi({
       query: () => "index.json",
     }),
     getOneSura: build.query({
-      query: (id) => "${id}.json",
+      query: () => `1.json`,
     }),
   }),
 });
 
-export const { useGetListSurasQuery } = sliceApi;
+export const { useGetListSurasQuery, useGetOneSuraQuery } = sliceApi;

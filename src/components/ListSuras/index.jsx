@@ -1,4 +1,3 @@
-import React from "react";
 import Sura from "./Sura";
 import { useGetListSurasQuery } from "../../redux";
 

@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='' element={<Suras />} />
-        <Route path='/1' element={<Ayas />} />
+        <Route path=':id' element={<Ayas />} />
       </Routes>
     </div>
   );

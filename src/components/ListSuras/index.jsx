@@ -2,7 +2,7 @@ import Sura from "./Sura";
 import { useGetListSurasQuery } from "../../redux";
 
 function Suras(props) {
-  const { data = [], isLoading } = useGetListSurasQuery();
+  const { data, isLoading } = useGetListSurasQuery();
   if (isLoading) return <h1>Loading...</h1>;
 
   return (

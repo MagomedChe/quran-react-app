@@ -3,15 +3,16 @@ import { useParams } from "react-router-dom";
 import Sura from "../ListSuras/Sura";
 
 function OneSura(props) {
-  const id = useParams().id;
-  const { data = [], isLoading } = useGetOneSuraQuery();
+  const id = parseInt(useParams().id);
+  const { data = [], isLoading } = useGetOneSuraQuery(id);
   if (isLoading) return <h1>Loading sura ...</h1>;
-  console.log({ data });
+  console.log(id);
   return (
     <>
-      {/* {data.verses.map((oneSura) => {
-        return <div key={oneSura.id}>{oneSura.id}</div>;
-      })} */}
+      <div>{data.name}</div>
+      {data.verses.map((oneSura) => {
+        return <div key={oneSura.id}>{oneSura.text}</div>;
+      })}
     </>
   );
 }

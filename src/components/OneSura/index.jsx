@@ -1,6 +1,5 @@
 import { useGetOneSuraQuery } from "../../redux";
 import { useParams } from "react-router-dom";
-import Sura from "../ListSuras/Sura";
 
 function OneSura(props) {
   const id = parseInt(useParams().id);
@@ -9,10 +8,25 @@ function OneSura(props) {
   console.log(id);
   return (
     <>
-      <div>{data.name}</div>
-      {data.verses.map((oneSura) => {
-        return <div key={oneSura.id}>{oneSura.text}</div>;
-      })}
+      <div>
+        <div>{data.name}</div>
+        <div>Сура "{data.translation}"</div>
+      </div>
+      <div className='flex w-full flex-wrap flex-row-reverse break-words'>
+        {data.verses.map((oneSura) => {
+          return (
+            <div key={oneSura.id} className='my-7 flex break-keep'>
+              <p className='text-7xl break-keep flex'>
+                <div className='relative text-3xl flex items-center break-keep'>
+                  <span className=' material-symbols-outlined text-7xl text-center absolute'>brightness_empty</span>
+                  <span className=' text-lg text-center w-18'>{oneSura.id}</span>
+                  {oneSura.text}
+                </div>
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

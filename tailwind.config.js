@@ -4,8 +4,16 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        98: "27rem",
+        84: "21rem",
+        130: "30rem",
         18: "4.5rem",
+        w48: "48%",
+      },
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1440px",
       },
     },
   },

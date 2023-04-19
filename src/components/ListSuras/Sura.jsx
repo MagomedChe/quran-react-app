@@ -6,18 +6,18 @@ import TotalAndTranslationSuras from "./TotalAndTranslationSuras";
 
 function Sura({ sura }) {
   return (
-    <div>
+    <>
       <NavLink
-        className='text-gray-600 font-medium border-gray-300 w-98 my-4 h-28 flex rounded-xl border'
+        className='w-full md:w-w48 lg:w-130 mx-1 text-gray-400 font-medium h-28 flex  border-b border-gray-300 md:border md:rounded-xl md: mb-3 '
         to={`${sura.id}`}
       >
         <NumberSuras sura={sura} />
-        <div className='w-full mx-8  my-auto items-center'>
+        <div className='w-full lg:w-130 ml-8 mr-3  my-auto items-center'>
           <TotalAndTranslationSuras sura={sura} />
           <NameAndTransliterationSuras sura={sura} />
         </div>
       </NavLink>
-    </div>
+    </>
   );
 }
 

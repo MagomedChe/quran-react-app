@@ -5,7 +5,7 @@ import OneSura from "./components/OneSura";
 
 function App() {
   return (
-    <div className='container m-auto w-900px'>
+    <div className='w-full md:w-11/12 lg:container mx-auto'>
       <Header />
       <Routes>
         <Route path='/' element={<Suras />} />

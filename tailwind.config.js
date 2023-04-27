@@ -12,8 +12,11 @@ module.exports = {
       screens: {
         sm: "480px",
         md: "768px",
-        lg: "1024px",
+        lg: "1065px",
         xl: "1440px",
+      },
+      boxShadow: {
+        "3xl": "0px 0px 8px 1px #0606061c",
       },
     },
   },

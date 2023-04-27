@@ -1,9 +1,15 @@
 import Sura from "./Sura";
 import { useGetListSurasQuery } from "../../redux";
+import Preloader from "../Preloader/Preloader";
 
 function Suras(props) {
   const { data, isLoading } = useGetListSurasQuery();
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
 
   return (
     <>

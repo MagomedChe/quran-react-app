@@ -1,23 +1,28 @@
-function Preloader() {
-  const preloader = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+import React from "react";
 
-  return preloader.map((index) => {
-    return (
-      <div key={index} class='shadow rounded-md p-4 max-w-sm w-full mx-auto flex flex-wrap'>
-        <div class='animate-pulse flex space-x-4'>
-          <div class='rounded-full bg-slate-200 h-12 w-12 m-auto'></div>
-          <div class='flex-1 space-y-3 py-1'>
-            <div class='space-y-3'>
-              <div class='grid  gap-4 col-start-1 col-end-3 '>
-                <div class='h-5 bg-slate-200 rounded col-span-1'></div>
-                <div class='h-5 bg-slate-200 rounded col-span-1'></div>
+const Preloader = (props) => {
+  const preload = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+  return (
+    <div className='w-full mx-auto flex flex-wrap justify-between animate-pulse'>
+      {preload.map((index) => {
+        return (
+          <>
+            <div
+              key={index}
+              class=' md:mb-3 w-full md:w-w48 lg:w-w48 xl:w-[32%] mx-1 shadow-3xl h-28 flex border-b border-gray-300 md:rounded-xl px-5 my-auto items-center justify-around'
+            >
+              <div className='rounded-full bg-slate-200 h-12 w-12'></div>
+              <div className='w-[80%] my-auto items-center'>
+                <div className='flex justify-between items-center mb-2 h-5 bg-slate-200 md:rounded-xl'></div>
+                <div className='flex justify-between items-center h-5 bg-slate-200 md:rounded-xl'></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    );
-  });
-}
+          </>
+        );
+      })}
+    </div>
+  );
+};
 
 export default Preloader;

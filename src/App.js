@@ -2,7 +2,6 @@ import Suras from "./components/ListSuras/index";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import OneSura from "./components/OneSura";
-import Preloader from "./components/Preloader/Preloader";
 
 function App() {
   return (

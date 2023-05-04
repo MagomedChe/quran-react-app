@@ -10,7 +10,7 @@ const Preloader = (props) => {
           <>
             <div
               key={index}
-              class=' md:mb-3 w-full md:w-w48 lg:w-w48 xl:w-[32%] mx-1 shadow-3xl h-28 flex border-b border-gray-300 md:rounded-xl px-5 my-auto items-center justify-around'
+              className='md:mb-3 w-full md:w-w48 lg:w-w48 xl:w-[32%] mx-1 shadow-3xl h-28 flex border-b border-gray-300 md:rounded-xl px-5 my-auto items-center justify-around'
             >
               <div className='rounded-full bg-slate-200 h-12 w-12'></div>
               <div className='w-[80%] my-auto items-center'>

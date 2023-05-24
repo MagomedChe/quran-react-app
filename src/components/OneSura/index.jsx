@@ -12,14 +12,23 @@ function OneSura(props) {
         <div>{data.name}</div>
         <div>Сура "{data.translation}"</div>
       </div>
-      <div className='break-keep grid justify-items-end w-full flex-wrap flex-row-reverse'>
+      <div className="break-keep grid justify-items-end w-full flex-wrap flex-row-reverse">
         {data.verses.map((oneSura) => {
           return (
-            <div key={oneSura.id} className='my-7 relative text-3xl flex items-center break-keep'>
-              <p className='break-all text-center text-3xl leading-8 align-middle'>
+            <div
+              key={oneSura.id}
+              className="my-7 relative text-3xl flex items-center break-keep"
+            >
+              <p dir="rtl" className="break-all text-3xl flex items-center">
                 {oneSura.text}
-                <span className=' material-symbols-outlined text-7xl text-center w-18'>brightness_empty</span>
-                {oneSura.id}
+                <div className="relative text-2xl flex items-center">
+                  <span className=" material-symbols-outlined text-7xl text-center absolute">
+                    brightness_empty
+                  </span>
+                  <span className=" text-lg text-center w-18">
+                    {oneSura.id}
+                  </span>
+                </div>
               </p>
             </div>
           );

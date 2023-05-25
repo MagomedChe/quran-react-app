@@ -19,7 +19,10 @@ function OneSura(props) {
               key={oneSura.id}
               className="my-7 relative text-3xl flex items-center break-keep"
             >
-              <p dir="rtl" className="break-all text-3xl flex items-center">
+              <p
+                dir="rtl"
+                className="relative break-all text-3xl flex items-center"
+              >
                 {oneSura.text}
                 <div className="relative text-2xl flex items-center">
                   <span className=" material-symbols-outlined text-7xl text-center absolute">

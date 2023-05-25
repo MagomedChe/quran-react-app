@@ -8,9 +8,11 @@ const Sura = ({ sura }) => {
   // const [hover, setHover] = useState(false);
   const numberHoverRef = useRef();
   const nameHoverRef = useRef();
+  const translationRef = useRef();
   const handleHover = () => {
     numberHoverRef.current.classList.toggle("lg:text-cyan-500");
     nameHoverRef.current.classList.toggle("lg:text-cyan-500");
+    translationRef.current.classList.toggle("text-amber-600");
   };
 
   return (
@@ -18,12 +20,12 @@ const Sura = ({ sura }) => {
       <NavLink
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
-        className='md:mb-3 w-full md:w-w48 lg:w-w48 xl:w-[32%] mx-1 hover:shadow-3xl  hover:border-0  lg:text-gray-500 font-medium h-28 flex border-b  border-gray-300 md:border md:rounded-xl '
+        className="md:mb-3 w-full md:w-w48 lg:w-w48 xl:w-[32%] mx-1 hover:shadow-3xl  hover:border-0  lg:text-gray-500 font-medium h-28 flex border-b  border-gray-300 md:border md:rounded-xl "
         to={`${sura.id}`}
       >
         <NumberSuras sura={sura} ref={numberHoverRef} />
-        <div className='w-full lg:w-130 ml-5 mr-3 my-auto items-center'>
-          <TotalAndTranslationSuras sura={sura} />
+        <div className="w-full lg:w-130 ml-5 mr-3 my-auto items-center ">
+          <TotalAndTranslationSuras sura={sura} ref={translationRef} />
           <NameAndTransliterationSuras sura={sura} ref={nameHoverRef} />
         </div>
       </NavLink>

@@ -4,7 +4,7 @@ function Header(props) {
   return (
     <header className="w-full flex my-8 justify-between text-cyan-500 text-6xl">
       <NavLink to={"/"}>
-        <div className="casdf">القرآن</div>
+        <div className="">القرآن</div>
       </NavLink>
       <div className="flex">
         <div className="ml-8">

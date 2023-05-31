@@ -8,11 +8,9 @@ const Sura = ({ sura }) => {
   // const [hover, setHover] = useState(false);
   const numberHoverRef = useRef();
   const nameHoverRef = useRef();
-  const translationRef = useRef();
   const handleHover = () => {
     numberHoverRef.current.classList.toggle("lg:text-cyan-500");
     nameHoverRef.current.classList.toggle("lg:text-cyan-500");
-    translationRef.current.classList.toggle("text-amber-600");
   };
 
   return (
@@ -25,7 +23,7 @@ const Sura = ({ sura }) => {
       >
         <NumberSuras sura={sura} ref={numberHoverRef} />
         <div className="w-full lg:w-130 ml-5 mr-3 my-auto items-center ">
-          <TotalAndTranslationSuras sura={sura} ref={translationRef} />
+          <TotalAndTranslationSuras sura={sura} />
           <NameAndTransliterationSuras sura={sura} ref={nameHoverRef} />
         </div>
       </NavLink>

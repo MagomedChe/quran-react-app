@@ -8,13 +8,13 @@ function OneSura(props) {
   console.log(data);
   return (
     <>
-      <div className="flex justify-between py-9">
+      <div className="flex justify-between py-9 text-gray-500 items-end">
         <div className="text-xl">
           {data.total_verses <= 4
             ? `${data.total_verses} аята`
             : `${data.total_verses} аятов`}
         </div>
-        <div className="text-cyan-500 text-3xl">{data.name}</div>
+        <div className="text-cyan-500 text-6xl">{data.name}</div>
         <div className="text-xl">Сура "{data.translation}"</div>
       </div>
       <div className="break-keep grid justify-items-end w-full flex-wrap flex-row-reverse">
@@ -22,7 +22,7 @@ function OneSura(props) {
           return (
             <div
               key={oneSura.id}
-              className="my-7 pb-7 relative text-3xl inline-flex items-center break-keep w-full border-b-2"
+              className=" my-7 pb-7 relative text-3xl inline-flex items-center break-keep w-full border-b-2"
             >
               <span
                 dir="rtl"

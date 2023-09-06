@@ -1,11 +1,10 @@
 import React from "react";
 
 const Ayas = ({ oneSura }) => {
-  console.log(oneSura);
   return (
     <div
       key={oneSura.id}
-      className=" my-7 pb-7 relative text-3xl inline-flex items-center break-keep w-full border-b-2"
+      className="my-7 pb-7 relative text-3xl inline-flex items-center break-keep w-full"
     >
       <span
         dir="rtl"
